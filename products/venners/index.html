@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stone Station | Veneer Sheets</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+
+        <!-- <div class="header-container">
+            <a href="/products/index.html" style="text-decoration: none;"><div class="logo">STONE <span>STATION</span></div></a>
+        </div> -->
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Stone Station</div>
+                <nav>
+                    <ul>
+                        <li><a href="/products/index.html"><i class="fa-solid fa-house"></i></a></li>
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search -->
+    <div class="search-container">
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search veneer sheets...">
+            <button id="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="products-container" id="products-container">
+        <!-- Products will be loaded here -->
+    </div>
+
+    <!-- Footer -->
+    <!-- <footer>
+        <div class="footer-container">
+            <div class="footer-logo">STONE <span>STATION</span></div>
+            <a href="our-work.html" class="work-btn">Our Work</a>
+            <div class="copyright">© 2023 Stone Station. Developed by <a href="#">Shaino Web</a></div>
+        </div>
+    </footer> -->
+
+    <!-- Modal -->
+    <div class="modal" id="imageModal">
+        <span class="modal-close" id="modalClose">&times;</span>
+        <div class="modal-content">
+            <div class="modal-image-container" id="modalImageContainer">
+                <img class="modal-image" id="modalImage" src="" alt="">
+            </div>
+            <div class="zoom-controls">
+                <button class="zoom-btn" id="zoomIn"><i class="fas fa-search-plus"></i></button>
+                <button class="zoom-btn" id="zoomOut"><i class="fas fa-search-minus"></i></button>
+                <button class="zoom-btn" id="zoomReset"><i class="fas fa-expand"></i></button>
+            </div>
+            <div class="modal-info">
+                <h3 id="modalTitle"></h3>
+                <p>2mm Thickness</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
