@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stone Station</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Stone Station</div>
+                <nav>
+                    <ul>
+                        <li><a href="venners/index.html">Veneer</a></li>
+                        <li><a href="#contact"><i class="fa-solid fa-address-book"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Premium Stone Collection</h1>
+            <p>Quality natural stone for your projects</p>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search products...">
+        </div>
+
+        <h2 class="section-title">Our Products</h2>
+
+        <div class="products" id="products-container"></div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Stone Station</div>
+                <a href="https://stonestation.github.io/Our-Presentation/" class="work-btn">Our Work</a>
+                <div class="contact-info">
+                    <p>Email: stonestation9@gmail.com</p>
+                    <p>Address: Rajkot, India</p>
+                </div>
+                <p class="copyright"> ©Stone Station. Developed by <a
+                        href="https://www.instagram.com/shainowebsolutions?igsh=MTN1aWU5ZDZ2bnJpag==">shainowebsolutions</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content-container">
+            <div class="modal-image-container">
+                <img class="modal-content" id="modalImage">
+                <div class="zoom-controls">
+                    <button class="zoom-btn" id="zoom-in"><i class="fas fa-search-plus"></i></button>
+                    <button class="zoom-btn" id="zoom-out"><i class="fas fa-search-minus"></i></button>
+                    <button class="zoom-btn" id="zoom-reset"><i class="fas fa-expand"></i></button>
+                </div>
+            </div>
+            <div class="modal-info">
+                <h2 id="modalTitle"></h2>
+                <p id="modalDescription"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

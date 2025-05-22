@@ -2,83 +2,258 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stone Station</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/logo.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stone Masonry Loader</title>
+    <style>
+        :root {
+            --brick1: #ff8c00;
+            /* Orange */
+            --brick2: #ff6b00;
+            /* Darker orange */
+            --brick3: #e65c00;
+            /* Even darker orange */
+            --mortar: #e0e0e0;
+            /* Light gray mortar */
+            --accent: #333333;
+            /* Dark text */
+            --bg-dark: #ffffff;
+            /* White background */
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg-dark);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Segoe UI', sans-serif;
+            overflow: hidden;
+        }
+
+        .loader-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #ffffff;
+            /* White background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            transition: opacity 0.8s ease;
+        }
+
+        .masonry-wrapper {
+            position: relative;
+            width: 54vmin;
+            height: 54vmin;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo-img {
+            position: absolute;
+            width: 54%;
+            height: auto;
+            z-index: -1;
+            opacity: 1;
+            /* Logo always fully visible */
+            filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.1));
+        }
+
+        .brick-wall {
+            width: 36vmin;
+            height: 36vmin;
+            position: relative;
+            border-radius: 5px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            /* background-color: #f5f5f5; */
+            /* Light gray background for the wall */
+        }
+
+        .brick-row {
+            display: flex;
+            position: absolute;
+            width: 100%;
+            left: 0;
+        }
+
+        .brick {
+            height: 3.6vmin;
+            width: 27vmin;
+            margin: 0.00vmin;
+            background: var(--brick1);
+            opacity: 0;
+            transform: translateY(100%);
+            box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.3), 0 2px 2px rgba(0, 0, 0, 0.1);
+            transition: all 0.45s ease;
+            border-radius: 0.9px;
+            position: relative;
+        }
+
+        .brick::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.1));
+        }
+
+        .brick.dark {
+            background: var(--brick2);
+        }
+
+        .brick.darker {
+            background: var(--brick3);
+        }
+
+        .progress-info {
+            position: absolute;
+            top: 0vmin;
+            width: 100%;
+            text-align: center;
+        }
+
+        .percentage {
+            font-size: 3.6vmin;
+            color: var(--accent);
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(255, 140, 0, 0.3);
+            /* Orange glow */
+        }
+
+        .status-text {
+            font-size: 1.26vmin;
+            color: var(--accent);
+            margin-top: 0.9vmin;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .content {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .progress-info {
+                position: absolute;
+                top: -2.7vmin;
+                width: 100%;
+                text-align: center;
+            }
+
+            .status-text {
+                font-size: 1.8vmin;
+                margin-top: 1.8vmin;
+            }
+
+            .brick {
+                height: 3.6vmin;
+                width: 30vmin;
+            }
+
+            .brick-wall {
+                width: 36vmin;
+                height: 36vmin;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">Stone Station</div>
-                <nav>
-                    <ul>
-                        <li><a href="venners/index.html">Veneer</a></li>
-                        <li><a href="#contact"><i class="fa-solid fa-address-book"></i></a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
+    <div class="content">
 
-    <section class="hero">
-        <div class="container">
-            <h1>Premium Stone Collection</h1>
-            <p>Quality natural stone for your projects</p>
-        </div>
-    </section>
+    </div>
 
-    <section id="gallery">
-        <div class="search-container">
-            <input type="text" id="search-input" placeholder="Search products...">
-        </div>
-
-        <h2 class="section-title">Our Products</h2>
-
-        <div class="products" id="products-container"></div>
-    </section>
-
-    <footer id="contact">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">Stone Station</div>
-                <a href="https://stonestation.github.io/Our-Presentation/" class="work-btn">Our Work</a>
-                <div class="contact-info">
-                    <p>Email: stonestation9@gmail.com</p>
-                    <p>Address: Rajkot, India</p>
-                </div>
-                <p class="copyright"> ©Stone Station. Developed by <a
-                        href="https://www.instagram.com/shainowebsolutions?igsh=MTN1aWU5ZDZ2bnJpag==">shainowebsolutions</a>
-                </p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Modal -->
-    <div id="imageModal" class="modal">
-        <span class="close">&times;</span>
-        <div class="modal-content-container">
-            <div class="modal-image-container">
-                <img class="modal-content" id="modalImage">
-                <div class="zoom-controls">
-                    <button class="zoom-btn" id="zoom-in"><i class="fas fa-search-plus"></i></button>
-                    <button class="zoom-btn" id="zoom-out"><i class="fas fa-search-minus"></i></button>
-                    <button class="zoom-btn" id="zoom-reset"><i class="fas fa-expand"></i></button>
-                </div>
-            </div>
-            <div class="modal-info">
-                <h2 id="modalTitle"></h2>
-                <p id="modalDescription"></p>
+    <div class="loader-container">
+        <div class="masonry-wrapper">
+            <img src="StoneStationLogo.png" alt="Stone Station" class="logo-img" id="brandLogo" />
+            <div class="brick-wall" id="brickWall"></div>
+            <div class="progress-info">
+                <div class="percentage" id="percentage">0%</div>
+                <div class="status-text">Building Your Vision</div>
             </div>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        const brickWall = document.getElementById('brickWall');
+        const brandLogo = document.getElementById('brandLogo');
+        const percentage = document.getElementById('percentage');
+        const loaderContainer = document.querySelector('.loader-container');
+        const content = document.querySelector('.content');
+
+        const brickW = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--brick-width')) || 12;
+        const brickH = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--brick-height')) || 6;
+
+        const wallW = brickWall.offsetWidth;
+        const wallH = brickWall.offsetHeight;
+
+        const brickWidth = brickWall.querySelector('.brick')?.offsetWidth || wallW * 0.15;
+        const brickHeight = wallH * 0.1;
+        const margin = wallW * 0.01;
+
+        const bricksPerRow = Math.floor(wallW / (brickWidth + margin));
+        const totalRows = Math.floor(wallH / (brickHeight));
+
+        let allBricks = [];
+
+        for (let row = 0; row < totalRows; row++) {
+            const rowDiv = document.createElement('div');
+            rowDiv.className = 'brick-row';
+            rowDiv.style.bottom = `${row * brickHeight}px`;
+            if (row % 2 !== 0) rowDiv.style.left = `${brickWidth / 2}px`;
+
+            for (let col = 0; col < bricksPerRow + 1; col++) {
+                const brick = document.createElement('div');
+                brick.className = 'brick';
+
+                const rand = Math.random();
+                if (rand > 0.85) brick.classList.add('darker');
+                else if (rand > 0.5) brick.classList.add('dark');
+
+                rowDiv.appendChild(brick);
+                allBricks.push(brick);
+            }
+            brickWall.appendChild(rowDiv);
+        }
+
+        let total = allBricks.length;
+        let shown = 0;
+        const duration = 2700;
+        const interval = duration / total;
+
+        const animateBricks = setInterval(() => {
+            if (shown < total) {
+                const brick = allBricks[shown];
+                brick.style.opacity = '1';
+                brick.style.transform = 'translateY(0)';
+                shown++;
+                const percent = Math.floor((shown / total) * 100);
+                percentage.textContent = `${percent}%`;
+                // Removed the logo opacity change
+            } else {
+                clearInterval(animateBricks);
+                percentage.textContent = `100%`;
+                setTimeout(() => {
+                    loaderContainer.style.opacity = '0';
+
+                    setTimeout(() => {
+                        window.location.href = 'home.html'; // Redirects to index.html
+                    }, 800);
+                }, 500);
+            }
+        }, interval);
+    </script>
 </body>
 
 </html>
