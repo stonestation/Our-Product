@@ -249,192 +249,22 @@ const products = [
 
 
 
-let is3DMode = false;
-// let isDragging = false;
-// let startX, startY;
-let currentRotationX = 0;
-let currentRotationY = 0;
-let targetRotationX = 0;
-let targetRotationY = 0;
-let animationId = null;
 
-// function displayProducts(filter = '') {
-//   const container = document.getElementById('products-container');
-//   container.innerHTML = '';
-
-//   const filteredProducts = filter ? products.filter(p => 
-//     p.name.toLowerCase().includes(filter.toLowerCase()) || 
-//     p.description.toLowerCase().includes(filter.toLowerCase())
-//   ) : products;
-
-//   if (filteredProducts.length === 0) {
-//     container.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:#666;font-size:13px;">No products found</p>';
-//     return;
-//   }
-
-//   filteredProducts.forEach(product => {
-//     const card = document.createElement('div');
-//     card.className = 'product-card';
-//     card.innerHTML = `
-//       <div class="product-image">
-//         <img src="${product.image}" alt="${product.name}" loading="lazy">
-//       </div>
-//       <div class="product-info">
-//         <h3 class="product-name">${product.name}</h3>
-//         <p class="product-description">${product.description.split('|').slice(0,2).join('|')}</p>
-//       </div>
-//     `;
-//     card.addEventListener('click', () => openModal(product));
-//     container.appendChild(card);
-//   });
-// }
-
-// function openModal(product) {
-//   const modal = document.getElementById('imageModal');
-//   const img = document.getElementById('modalImage');
-//   const title = document.getElementById('modalTitle');
-//   const desc = document.getElementById('modalDescription');
-//   const perspectiveBtn = document.getElementById('perspective-btn');
-
-//   img.src = product.image;
-//   img.alt = product.name;
-//   title.textContent = product.name;
-//   desc.innerHTML = product.description.split('|').map(p => `<p>• ${p.trim()}</p>`).join('');
-  
-//   // Reset transformations
-//   img.style.transform = 'rotateX(0) rotateY(0) scale(1)';
-//   currentRotationX = 0;
-//   currentRotationY = 0;
-//   is3DMode = false;
-//   perspectiveBtn.classList.remove('active');
-//   img.style.cursor = 'default';
-  
-//   modal.style.display = "block";
-// }
-
-// function initDragEvents(element) {
-//   element.addEventListener('mousedown', (e) => {
-//     if (!is3DMode) return;
-//     isDragging = true;
-//     startX = e.clientX;
-//     startY = e.clientY;
-//     element.style.cursor = 'grabbing';
-//   });
-  
-//   document.addEventListener('mousemove', (e) => {
-//     if (!isDragging || !is3DMode) return;
-    
-//     const deltaX = e.clientX - startX;
-//     const deltaY = e.clientY - startY;
-    
-//     targetRotationY = deltaX * 0.3;
-//     targetRotationX = -deltaY * 0.3;
-    
-//     if (!animationId) animateRotation();
-//   });
-  
-//   document.addEventListener('mouseup', () => {
-//     if (isDragging) {
-//       isDragging = false;
-//       element.style.cursor = 'grab';
-//     }
-//   });
-// }
-
-// function animateRotation() {
-//   const img = document.getElementById('modalImage');
-  
-//   currentRotationX += (targetRotationX - currentRotationX) * 0.2;
-//   currentRotationY += (targetRotationY - currentRotationY) * 0.2;
-  
-//   img.style.transform = `rotateX(${currentRotationX}deg) rotateY(${currentRotationY}deg)`;
-  
-//   if (Math.abs(targetRotationX - currentRotationX) > 0.1 || 
-//       Math.abs(targetRotationY - currentRotationY) > 0.1) {
-//     animationId = requestAnimationFrame(animateRotation);
-//   } else {
-//     animationId = null;
-//   }
-// }
-
-// // Event listeners
-// document.querySelector('.close').addEventListener('click', () => {
-//   document.getElementById('imageModal').style.display = "none";
-//   cancelAnimationFrame(animationId);
-// });
-
-// window.addEventListener('click', (e) => {
-//   if (e.target === document.getElementById('imageModal')) {
-//     document.getElementById('imageModal').style.display = "none";
-//     cancelAnimationFrame(animationId);
-//   }
-// });
-
-// document.getElementById('search-input').addEventListener('input', function() {
-//   displayProducts(this.value);
-// });
-
-// document.getElementById('perspective-btn').addEventListener('click', function() {
-//   const img = document.getElementById('modalImage');
-//   is3DMode = !is3DMode;
-  
-//   if (is3DMode) {
-//     this.classList.add('active');
-//     img.style.cursor = 'grab';
-//     initDragEvents(img);
-//   } else {
-//     this.classList.remove('active');
-//     img.style.cursor = 'default';
-//     targetRotationX = 0;
-//     targetRotationY = 0;
-//     if (!animationId) animateRotation();
-//   }
-// });
-
-// document.getElementById('zoom-in').addEventListener('click', () => {
-//   const img = document.getElementById('modalImage');
-//   const scale = parseFloat(img.dataset.scale) || 1;
-//   const newScale = scale + 0.2;
-//   img.style.transform = `rotateX(${currentRotationX}deg) rotateY(${currentRotationY}deg) scale(${newScale})`;
-//   img.dataset.scale = newScale;
-// });
-
-// document.getElementById('zoom-out').addEventListener('click', () => {
-//   const img = document.getElementById('modalImage');
-//   const scale = parseFloat(img.dataset.scale) || 1;
-//   const newScale = Math.max(0.5, scale - 0.2);
-//   img.style.transform = `rotateX(${currentRotationX}deg) rotateY(${currentRotationY}deg) scale(${newScale})`;
-//   img.dataset.scale = newScale;
-// });
-
-// document.getElementById('zoom-reset').addEventListener('click', () => {
-//   const img = document.getElementById('modalImage');
-//   img.style.transform = 'rotateX(0) rotateY(0) scale(1)';
-//   img.dataset.scale = '1';
-// });
-
-// // Initialize
-// document.addEventListener('DOMContentLoaded', () => {
-//   displayProducts();
-  
-//   const img = document.getElementById('modalImage');
-//   img.addEventListener('wheel', (e) => {
-//     e.preventDefault();
-//     const scale = parseFloat(img.dataset.scale) || 1;
-//     const newScale = e.deltaY < 0 ? 
-//       Math.min(3, scale + 0.1) : 
-//       Math.max(0.5, scale - 0.1);
-//     img.style.transform = `rotateX(${currentRotationX}deg) rotateY(${currentRotationY}deg) scale(${newScale})`;
-//     img.dataset.scale = newScale;
-//   });
-// });
+// 3D Perspective Variables
+let isDragging = false;
+let startX, startY;
+let rotationX = 0;
+let rotationY = 0;
+let currentScale = 1;
+let touchId = null;
+let initialDistance = 0;
 
 function displayProducts(filter = '') {
   const container = document.getElementById('products-container');
   container.innerHTML = '';
 
-  const filteredProducts = filter ? products.filter(p => 
-    p.name.toLowerCase().includes(filter.toLowerCase()) || 
+  const filteredProducts = filter ? products.filter(p =>
+    p.name.toLowerCase().includes(filter.toLowerCase()) ||
     p.description.toLowerCase().includes(filter.toLowerCase())
   ) : products;
 
@@ -452,7 +282,7 @@ function displayProducts(filter = '') {
       </div>
       <div class="product-info">
         <h3 class="product-name">${product.name}</h3>
-        <p class="product-description">${product.description.split('|').slice(0,2).join('|')}</p>
+        <p class="product-description">${product.description.split('|').slice(0, 2).join('|')}</p>
       </div>
     `;
     card.addEventListener('click', () => openModal(product));
@@ -460,92 +290,25 @@ function displayProducts(filter = '') {
   });
 }
 
-// 3D Perspective Variables
-let isDragging = false;
-let startX, startY;
-let rotationX = 0;
-let rotationY = 0;
-let currentScale = 1;
-
-// Open Modal
 function openModal(product) {
   const modal = document.getElementById('imageModal');
   const modalImg = document.getElementById('modalImage');
-  
+
   modalImg.src = product.image;
   modalImg.alt = product.name;
   document.getElementById('modalTitle').textContent = product.name;
-  document.getElementById('modalDescription').innerHTML = 
+  document.getElementById('modalDescription').innerHTML =
     product.description.split('|').map(p => `<p>• ${p.trim()}</p>`).join('');
-  
+
   // Reset transformations
   rotationX = 0;
   rotationY = 0;
   currentScale = 1;
   updateImageTransform();
-  
+
   modal.style.display = "block";
 }
 
-// Mouse controls for 3D perspective
-function initMouseControls() {
-  const container = document.querySelector('.modal-image-container');
-  const img = document.getElementById('modalImage');
-
-  container.addEventListener('mousedown', (e) => {
-    isDragging = true;
-    startX = e.clientX;
-    startY = e.clientY;
-    container.classList.add('grabbing');
-  });
-
-  document.addEventListener('mousemove', (e) => {
-    if (!isDragging) return;
-    
-    const deltaX = e.clientX - startX;
-    const deltaY = e.clientY - startY;
-    
-    // Adjust rotation based on mouse movement
-    rotationY = deltaX * 0.2;
-    rotationX = -deltaY * 0.2;
-    
-    updateImageTransform();
-  });
-
-  document.addEventListener('mouseup', () => {
-    isDragging = false;
-    container.classList.remove('grabbing');
-  });
-
-  // Touch support
-  container.addEventListener('touchstart', (e) => {
-    isDragging = true;
-    startX = e.touches[0].clientX;
-    startY = e.touches[0].clientY;
-    container.classList.add('grabbing');
-    e.preventDefault();
-  });
-
-  document.addEventListener('touchmove', (e) => {
-    if (!isDragging) return;
-    
-    const deltaX = e.touches[0].clientX - startX;
-    const deltaY = e.touches[0].clientY - startY;
-    
-    rotationY = deltaX * 0.2;
-    rotationX = -deltaY * 0.2;
-    
-    updateImageTransform();
-    e.preventDefault();
-  });
-
-  document.addEventListener('touchend', () => {
-    isDragging = false;
-    container.classList.remove('grabbing');
-  });
-}
-
-// Update image transform
 function updateImageTransform() {
   const img = document.getElementById('modalImage');
   img.style.transform = `
@@ -554,6 +317,103 @@ function updateImageTransform() {
     rotateY(${rotationY}deg)
     scale(${currentScale})
   `;
+}
+
+// Initialize mouse and touch controls
+function initControls() {
+  const container = document.querySelector('.modal-image-container');
+  const img = document.getElementById('modalImage');
+
+  // Mouse events
+  container.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    startX = e.clientX;
+    startY = e.clientY;
+    container.classList.add('grabbing');
+    e.preventDefault();
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+
+    const deltaX = e.clientX - startX;
+    const deltaY = e.clientY - startY;
+
+    rotationY = deltaX * 0.2;
+    rotationX = -deltaY * 0.2;
+
+    updateImageTransform();
+    e.preventDefault();
+  });
+
+  document.addEventListener('mouseup', () => {
+    isDragging = false;
+    container.classList.remove('grabbing');
+  });
+
+  // Touch events
+  container.addEventListener('touchstart', (e) => {
+    if (e.touches.length === 1) {
+      const touch = e.touches[0];
+      isDragging = true;
+      touchId = touch.identifier;
+      startX = touch.clientX;
+      startY = touch.clientY;
+      container.classList.add('grabbing');
+      e.preventDefault();
+    } else if (e.touches.length === 2) {
+      // Pinch zoom
+      initialDistance = Math.hypot(
+        e.touches[0].clientX - e.touches[1].clientX,
+        e.touches[0].clientY - e.touches[1].clientY
+      );
+      e.preventDefault();
+    }
+  }, { passive: false });
+
+  document.addEventListener('touchmove', (e) => {
+    if (e.touches.length === 1 && isDragging) {
+      const touch = Array.from(e.touches).find(t => t.identifier === touchId);
+      if (!touch) return;
+
+      const deltaX = touch.clientX - startX;
+      const deltaY = touch.clientY - startY;
+
+      rotationY = deltaX * 0.3;
+      rotationX = -deltaY * 0.3;
+
+      updateImageTransform();
+      e.preventDefault();
+    } else if (e.touches.length === 2 && initialDistance > 0) {
+      // Pinch zoom
+      const currentDistance = Math.hypot(
+        e.touches[0].clientX - e.touches[1].clientX,
+        e.touches[0].clientY - e.touches[1].clientY
+      );
+
+      const scaleFactor = currentDistance / initialDistance;
+      currentScale = Math.max(0.5, Math.min(3, currentScale * scaleFactor));
+      updateImageTransform();
+
+      initialDistance = currentDistance;
+      e.preventDefault();
+    }
+  }, { passive: false });
+
+  document.addEventListener('touchend', (e) => {
+    if (e.touches.length === 0) {
+      isDragging = false;
+      container.classList.remove('grabbing');
+      initialDistance = 0;
+    } else if (e.touches.length === 1) {
+      // Check if our tracked touch is still there
+      const remainingTouch = Array.from(e.touches).find(t => t.identifier === touchId);
+      if (!remainingTouch) {
+        isDragging = false;
+        container.classList.remove('grabbing');
+      }
+    }
+  });
 }
 
 // Zoom controls
@@ -574,6 +434,15 @@ document.getElementById('zoom-reset').addEventListener('click', () => {
   updateImageTransform();
 });
 
+// Make zoom buttons touch-friendly
+['zoom-in', 'zoom-out', 'zoom-reset'].forEach(id => {
+  const btn = document.getElementById(id);
+  btn.addEventListener('touchstart', (e) => {
+    e.preventDefault();
+    btn.click();
+  }, { passive: false });
+});
+
 // Close modal
 document.querySelector('.close').addEventListener('click', () => {
   document.getElementById('imageModal').style.display = "none";
@@ -585,23 +454,29 @@ window.addEventListener('click', (e) => {
   }
 });
 
+// Make close button touch-friendly
+document.querySelector('.close').addEventListener('touchstart', (e) => {
+  e.preventDefault();
+  document.querySelector('.close').click();
+}, { passive: false });
+
 // Search functionality
-document.getElementById('search-input').addEventListener('input', function() {
+document.getElementById('search-input').addEventListener('input', function () {
   displayProducts(this.value);
 });
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
   displayProducts();
-  initMouseControls();
-  
+  initControls();
+
   // Mouse wheel zoom in modal
   const modalImg = document.getElementById('modalImage');
   modalImg.addEventListener('wheel', (e) => {
     e.preventDefault();
-    currentScale = e.deltaY < 0 ? 
-      Math.min(3, currentScale + 0.1) : 
+    currentScale = e.deltaY < 0 ?
+      Math.min(3, currentScale + 0.1) :
       Math.max(0.5, currentScale - 0.1);
     updateImageTransform();
-  });
+  }, { passive: false });
 });
