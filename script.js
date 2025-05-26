@@ -194,7 +194,8 @@ const products = [
   },
   {
     name: "Mint Ivory",
-    image: "images/Mint-Ivory.jpg",
+    
+    image: "images/Mint-ivory-Sandstone.jpg",
     description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Soft mint green with ivory accents."
   },
   {
