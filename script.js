@@ -1,5 +1,25 @@
 // Complete product data with descriptions including material type and thickness
 const products = [
+
+
+  // Sngle Stones 
+   {
+    name: "Agra Red",
+    image: "images/Single-Agra-Red.jpg",
+    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Vibrant red stone for bold designs."
+  },
+  {
+    name: "Agra Red Natural",
+    image: "images/New/Agra-Red-Natural.jpg",
+    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Unique green stone with speckled appearance."
+  },
+  {
+    name: "Chocolate",
+    image: "images/Single-Chocolate.jpg",
+    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Rich chocolate brown for cozy spaces."
+  },
+ 
+
   {
     name: "Bhanslana Split Face",
     image: "images/Bhanslana Split Face.jpg",
@@ -15,11 +35,7 @@ const products = [
     image: "images/Black-Slate-Wall-Cladding.jpg",
     description: "Material: Slate | Thickness: 15-20mm | Finish: Natural Cleft | Excellent for both interior and exterior wall applications."
   },
-  {
-    name: "Chocolate",
-    image: "images/Chocolate.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Sawn | Warm tones perfect for rustic and traditional designs."
-  },
+  
   {
     name: "Copper",
     image: "images/Copper.jpg",
@@ -131,20 +147,11 @@ const products = [
     description: "Material: Sandstone | Thickness: 20-30mm | Finish: Polished | Reflective surface with silver tones."
   },
   {
-    name: "Agra Red",
-    image: "images/Single-Agra-Red.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Vibrant red stone for bold designs."
-  },
-  {
     name: "Autumn Brown",
     image: "images/Single-Autumn-Brown.jpg",
     description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Warm brown tones resembling autumn leaves."
   },
-  {
-    name: "Chocolate",
-    image: "images/Single-Chocolate.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Rich chocolate brown for cozy spaces."
-  },
+  
   {
     name: "Deoli Green",
     image: "images/Single-Deoli-Green.jpg",
@@ -171,7 +178,7 @@ const products = [
     description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Multicolored stone with warm tones."
   },
   {
-    name: "Latipur Grey",
+    name: "Lalitpur Grey",
     image: "images/Single-Latipur-Grey.jpg",
     description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Cool grey with blue undertones."
   },
@@ -244,10 +251,75 @@ const products = [
     name: "Zeera Green",
     image: "images/Zeera-Green.jpg",
     description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Unique green stone with speckled appearance."
-  }
+  },
+  {
+    name: "Agra Red Natural",
+    image: "images/New/Agra-Red-Natural.jpg",
+    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Unique green stone with speckled appearance."
+  },
+  {
+    name: "Agra Red Pattern",
+    image: "images/New/Agra-Red-Pattern.webp",
+    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Unique green stone with speckled appearance."
+  },
+  {
+    name: "Agra Red Pattern",
+    image: "images/New/Agra-Red-Pattern-Natural.png",
+    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Unique green stone with speckled appearance."
+  },
+  {
+    name: "Dholpur Beige",
+    image: "images/New/Dholpur-Beidge-Natural.jpg",
+    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Unique green stone with speckled appearance."
+  },
+  {
+    name: "Kandla Grey Natural",
+    image: "images/New/Kandala-Grey-Natural-Sandstone.jpg",
+    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Unique green stone with speckled appearance."
+  },
+  {
+    name: "Kandla Grey",
+    image: "images/New/Kanadala-Grey-New.png",
+    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Unique green stone with speckled appearance."
+  },
+  {
+    name: "Lalitpur Natural",
+    image: "images/New/Lalitpur-Natural.jpg",
+    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Unique green stone with speckled appearance."
+  },
+  {
+    name: "Mandana Natural",
+    image: "images/New/Mandana-Natural-Sandstone.jpg",
+    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Unique green stone with speckled appearance."
+  },
+  ,
+  {
+    name: "Mint White",
+    image: "images/New/Mint-White-Natural.jpg",
+    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Unique green stone with speckled appearance."
+  },
+   ,
+  {
+    name: "Rainbow",
+    image: "images/New/Rainbow-Sandstone.jpg",
+    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Unique green stone with speckled appearance."
+  },
+   
+  {
+    name: "Rajgreen",
+    image: "images/New/Rajgreen-Natural.jpg",
+    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Unique green stone with speckled appearance."
+  },
+  ,
+   
+  {
+    name: "Teak Wood",
+    image: "images/New/Teak-Wood-Polished.jpg",
+    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Unique green stone with speckled appearance."
+  },
+  
+  
 ];
-
-
 
 
 // 3D Perspective Variables
@@ -263,10 +335,12 @@ function displayProducts(filter = '') {
   const container = document.getElementById('products-container');
   container.innerHTML = '';
 
-  const filteredProducts = filter ? products.filter(p =>
-    p.name.toLowerCase().includes(filter.toLowerCase()) ||
-    p.description.toLowerCase().includes(filter.toLowerCase())
-  ) : products;
+  const filteredProducts = filter
+    ? products.filter(p =>
+        p.name.toLowerCase().includes(filter.toLowerCase()) ||
+        p.description.toLowerCase().includes(filter.toLowerCase())
+      )
+    : products;
 
   if (filteredProducts.length === 0) {
     container.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:#666;font-size:13px;">No products found</p>';
@@ -300,7 +374,6 @@ function openModal(product) {
   document.getElementById('modalDescription').innerHTML =
     product.description.split('|').map(p => `<p>• ${p.trim()}</p>`).join('');
 
-  // Reset transformations
   rotationX = 0;
   rotationY = 0;
   currentScale = 1;
@@ -319,12 +392,10 @@ function updateImageTransform() {
   `;
 }
 
-// Initialize mouse and touch controls
 function initControls() {
   const container = document.querySelector('.modal-image-container');
   const img = document.getElementById('modalImage');
 
-  // Mouse events
   container.addEventListener('mousedown', (e) => {
     isDragging = true;
     startX = e.clientX;
@@ -335,13 +406,10 @@ function initControls() {
 
   document.addEventListener('mousemove', (e) => {
     if (!isDragging) return;
-
     const deltaX = e.clientX - startX;
     const deltaY = e.clientY - startY;
-
     rotationY = deltaX * 0.2;
     rotationX = -deltaY * 0.2;
-
     updateImageTransform();
     e.preventDefault();
   });
@@ -351,7 +419,6 @@ function initControls() {
     container.classList.remove('grabbing');
   });
 
-  // Touch events
   container.addEventListener('touchstart', (e) => {
     if (e.touches.length === 1) {
       const touch = e.touches[0];
@@ -362,7 +429,6 @@ function initControls() {
       container.classList.add('grabbing');
       e.preventDefault();
     } else if (e.touches.length === 2) {
-      // Pinch zoom
       initialDistance = Math.hypot(
         e.touches[0].clientX - e.touches[1].clientX,
         e.touches[0].clientY - e.touches[1].clientY
@@ -375,26 +441,20 @@ function initControls() {
     if (e.touches.length === 1 && isDragging) {
       const touch = Array.from(e.touches).find(t => t.identifier === touchId);
       if (!touch) return;
-
       const deltaX = touch.clientX - startX;
       const deltaY = touch.clientY - startY;
-
       rotationY = deltaX * 0.3;
       rotationX = -deltaY * 0.3;
-
       updateImageTransform();
       e.preventDefault();
     } else if (e.touches.length === 2 && initialDistance > 0) {
-      // Pinch zoom
       const currentDistance = Math.hypot(
         e.touches[0].clientX - e.touches[1].clientX,
         e.touches[0].clientY - e.touches[1].clientY
       );
-
       const scaleFactor = currentDistance / initialDistance;
       currentScale = Math.max(0.5, Math.min(3, currentScale * scaleFactor));
       updateImageTransform();
-
       initialDistance = currentDistance;
       e.preventDefault();
     }
@@ -406,7 +466,6 @@ function initControls() {
       container.classList.remove('grabbing');
       initialDistance = 0;
     } else if (e.touches.length === 1) {
-      // Check if our tracked touch is still there
       const remainingTouch = Array.from(e.touches).find(t => t.identifier === touchId);
       if (!remainingTouch) {
         isDragging = false;
@@ -416,25 +475,21 @@ function initControls() {
   });
 }
 
-// Zoom controls
+// Zoom buttons
 document.getElementById('zoom-in').addEventListener('click', () => {
   currentScale = Math.min(3, currentScale + 0.2);
   updateImageTransform();
 });
-
 document.getElementById('zoom-out').addEventListener('click', () => {
   currentScale = Math.max(0.5, currentScale - 0.2);
   updateImageTransform();
 });
-
 document.getElementById('zoom-reset').addEventListener('click', () => {
   currentScale = 1;
   rotationX = 0;
   rotationY = 0;
   updateImageTransform();
 });
-
-// Make zoom buttons touch-friendly
 ['zoom-in', 'zoom-out', 'zoom-reset'].forEach(id => {
   const btn = document.getElementById(id);
   btn.addEventListener('touchstart', (e) => {
@@ -447,14 +502,11 @@ document.getElementById('zoom-reset').addEventListener('click', () => {
 document.querySelector('.close').addEventListener('click', () => {
   document.getElementById('imageModal').style.display = "none";
 });
-
 window.addEventListener('click', (e) => {
   if (e.target === document.getElementById('imageModal')) {
     document.getElementById('imageModal').style.display = "none";
   }
 });
-
-// Make close button touch-friendly
 document.querySelector('.close').addEventListener('touchstart', (e) => {
   e.preventDefault();
   document.querySelector('.close').click();
@@ -465,18 +517,20 @@ document.getElementById('search-input').addEventListener('input', function () {
   displayProducts(this.value);
 });
 
-// Initialize
+// INITIALIZE and SORT alphabetically before display
 document.addEventListener('DOMContentLoaded', () => {
+  // Sort products A–Z by name
+  products.sort((a, b) => a.name.localeCompare(b.name));
   displayProducts();
   initControls();
 
-  // Mouse wheel zoom in modal
+  // Enable zoom with mouse wheel
   const modalImg = document.getElementById('modalImage');
   modalImg.addEventListener('wheel', (e) => {
     e.preventDefault();
-    currentScale = e.deltaY < 0 ?
-      Math.min(3, currentScale + 0.1) :
-      Math.max(0.5, currentScale - 0.1);
+    currentScale = e.deltaY < 0
+      ? Math.min(3, currentScale + 0.1)
+      : Math.max(0.5, currentScale - 0.1);
     updateImageTransform();
   }, { passive: false });
 });
