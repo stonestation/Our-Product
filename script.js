@@ -535,3 +535,37 @@ document.addEventListener('DOMContentLoaded', () => {
     updateImageTransform();
   }, { passive: false });
 });
+
+// // tool tip
+    // Toggle tooltip on mobile click
+        document.querySelectorAll('.tooltip').forEach(el => {
+      el.addEventListener('click', function () {
+        document.querySelectorAll('.tooltip').forEach(t => {
+          if (t !== el) t.classList.remove('active');
+        });
+        el.classList.toggle('active');
+      });
+    });
+
+//   // Show tooltip on mobile click
+//   document.querySelectorAll('.tooltip').forEach(el => {
+//     el.addEventListener('click', function () {
+//       // Close other tooltips
+//       document.querySelectorAll('.tooltip').forEach(tip => {
+//         if (tip !== el) tip.classList.remove('active');
+//       });
+//       // Toggle current
+//       el.classList.toggle('active');
+//     });
+//   });
+
+//   // Add active tooltip styling
+//   const style = document.createElement('style');
+//   style.innerHTML = `
+//     .tooltip.active::after,
+//     .tooltip.active::before {
+//       opacity: 1 !important;
+//       visibility: visible !important;
+//     }
+//   `;
+//   document.head.appendChild(style);
