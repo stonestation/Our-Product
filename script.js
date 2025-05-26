@@ -82,12 +82,12 @@ const products = [
     description: "Material: Sandstone | Thickness: 18-25mm | Finish: Brushed | Textured grey surface with enhanced durability."
   },
   {
-    name: "Kandla Grey Wall",
+    name: "Kandala Grey Wall",
     image: "images/Kandla-Grey-Wall.jpg",
     description: "Material: Sandstone | Thickness: 15-20mm | Finish: Natural | Light grey stone perfect for wall cladding."
   },
   {
-    name: "Kandla Grey Wall Cladding",
+    name: "Kandala Grey Wall Cladding",
     image: "images/Kandla-Grey-Wall-Cladding.jpg",
     description: "Material: Sandstone | Thickness: 15-20mm | Finish: Sawn | Uniform grey stone for seamless wall designs."
   },
@@ -158,7 +158,7 @@ const products = [
     description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Earthy green with natural variations."
   },
   {
-    name: "Kanadala Grey",
+    name: "Kandala Grey",
     image: "images/Single-Kanadala-Grey.jpg",
     description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Medium grey with subtle patterning."
   },
@@ -278,7 +278,7 @@ const products = [
     description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Unique green stone with speckled appearance."
   },
   {
-    name: "Kandla Grey",
+    name: "Kandala Grey",
     image: "images/New/Kanadala-Grey-New.png",
     description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Unique green stone with speckled appearance."
   },
