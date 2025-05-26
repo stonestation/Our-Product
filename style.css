@@ -379,9 +379,9 @@ footer {
   bottom: 130%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: white;
-  color: black;
-  border: 2px solid orange;
+   background-color: var(--secondary);
+  color: white;
+  border: 1px solid rgb(24, 16, 1);
   padding: 6px 12px;
   border-radius: 6px;
   font-size: 14px;
