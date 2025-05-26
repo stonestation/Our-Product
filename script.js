@@ -3,22 +3,17 @@ const products = [
 
 
   // Sngle Stones 
-   {
+  {
     name: "Agra Red",
     image: "images/Single-Agra-Red.jpg",
     description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Vibrant red stone for bold designs."
-  },
-  {
-    name: "Agra Red Natural",
-    image: "images/New/Agra-Red-Natural.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Unique green stone with speckled appearance."
   },
   {
     name: "Chocolate",
     image: "images/Single-Chocolate.jpg",
     description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Rich chocolate brown for cozy spaces."
   },
- 
+
 
   {
     name: "Bhanslana Split Face",
@@ -35,7 +30,7 @@ const products = [
     image: "images/Black-Slate-Wall-Cladding.jpg",
     description: "Material: Slate | Thickness: 15-20mm | Finish: Natural Cleft | Excellent for both interior and exterior wall applications."
   },
-  
+
   {
     name: "Copper",
     image: "images/Copper.jpg",
@@ -151,7 +146,7 @@ const products = [
     image: "images/Single-Autumn-Brown.jpg",
     description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Warm brown tones resembling autumn leaves."
   },
-  
+
   {
     name: "Deoli Green",
     image: "images/Single-Deoli-Green.jpg",
@@ -194,7 +189,7 @@ const products = [
   },
   {
     name: "Mint Ivory",
-    
+
     image: "images/Mint-ivory-Sandstone.jpg",
     description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Soft mint green with ivory accents."
   },
@@ -299,27 +294,27 @@ const products = [
     image: "images/New/Mint-White-Natural.jpg",
     description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Unique green stone with speckled appearance."
   },
-   ,
+  ,
   {
     name: "Rainbow",
     image: "images/New/Rainbow-Sandstone.jpg",
     description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Unique green stone with speckled appearance."
   },
-   
+
   {
     name: "Rajgreen",
     image: "images/New/Rajgreen-Natural.jpg",
     description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Unique green stone with speckled appearance."
   },
   ,
-   
+
   {
     name: "Teak Wood",
     image: "images/New/Teak-Wood-Polished.jpg",
     description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Unique green stone with speckled appearance."
   },
-  
-  
+
+
 ];
 
 
@@ -338,9 +333,9 @@ function displayProducts(filter = '') {
 
   const filteredProducts = filter
     ? products.filter(p =>
-        p.name.toLowerCase().includes(filter.toLowerCase()) ||
-        p.description.toLowerCase().includes(filter.toLowerCase())
-      )
+      p.name.toLowerCase().includes(filter.toLowerCase()) ||
+      p.description.toLowerCase().includes(filter.toLowerCase())
+    )
     : products;
 
   if (filteredProducts.length === 0) {
@@ -537,15 +532,15 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // // tool tip
-    // Toggle tooltip on mobile click
-        document.querySelectorAll('.tooltip').forEach(el => {
-      el.addEventListener('click', function () {
-        document.querySelectorAll('.tooltip').forEach(t => {
-          if (t !== el) t.classList.remove('active');
-        });
-        el.classList.toggle('active');
-      });
+// Toggle tooltip on mobile click
+document.querySelectorAll('.tooltip').forEach(el => {
+  el.addEventListener('click', function () {
+    document.querySelectorAll('.tooltip').forEach(t => {
+      if (t !== el) t.classList.remove('active');
     });
+    el.classList.toggle('active');
+  });
+});
 
 //   // Show tooltip on mobile click
 //   document.querySelectorAll('.tooltip').forEach(el => {
