@@ -6,50 +6,50 @@ const products = [
   {
     name: "Agra Red",
     image: "images/Single-Agra-Red.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Vibrant red stone for bold designs."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
     name: "Chocolate",
     image: "images/Single-Chocolate.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Rich chocolate brown for cozy spaces."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
 
 
   {
     name: "Bhanslana Split Face",
     image: "images/Bhanslana Split Face.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Split Face | Ideal for exterior wall cladding and landscaping projects."
+    description: "Material: Slatestone | Thickness: 18-25mm"
   },
   {
     name: "Black Monsoon",
     image: "images/Black-Moonsoon.jpg",
-    description: "Material: Basalt | Thickness: 18-25mm | Finish: Honed | Perfect for modern architectural designs and flooring."
+    description: "Material: Slatestone | Thickness: 18-25mm"
   },
   {
-    name: "Black Slate Wall Cladding",
+    name: "Black Slate",
     image: "images/Black-Slate-Wall-Cladding.jpg",
-    description: "Material: Slate | Thickness: 15-20mm | Finish: Natural Cleft | Excellent for both interior and exterior wall applications."
+    description: "Material: Slatestone | Thickness: 18-25mm"
   },
 
   {
     name: "Copper",
     image: "images/Copper.jpg",
-    description: "Material: Sandstone | Thickness: 20-25mm | Finish: Honed | Unique copper tones for distinctive architectural features."
+    description: "Material: Slatestone | Thickness: 18-25mm"
   },
   {
     name: "Garda Buff",
     image: "images/Garda Buff.jpg",
-    description: "Material: Limestone | Thickness: 20-30mm | Finish: Natural | Light-colored stone ideal for contemporary designs."
+    description: "Material: Limestone | Thickness: 18-25mm"
   },
   {
-    name: "Garda Buff Coat",
+    name: "Garda Buff Coated",
     image: "images/Garda Buff Coat.jpg",
-    description: "Material: Limestone | Thickness: 18-22mm | Finish: Brushed | Textured surface with enhanced durability."
+    description: "Material: Limestone | Thickness: 18-25mm"
   },
   {
     name: "Golden State",
     image: "images/Golden-Slate.jpg",
-    description: "Material: Slate | Thickness: 15-20mm | Finish: Natural | Warm golden hues perfect for feature walls."
+    description: "Material: Slatestone | Thickness: 18-25mm"
   },
   {
     name: "Jak Black",
@@ -57,261 +57,261 @@ const products = [
     description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Deep black stone with subtle grain patterns."
   },
   {
-    name: "Jak Black Coat",
+    name: "Jak Black Coated",
     image: "images/Jak-Black-Coat.jpg",
-    description: "Material: Sandstone | Thickness: 18-25mm | Finish: Brushed | Matte black finish with enhanced texture."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
     name: "Jak Multi",
     image: "images/Jak-Multi.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Multicolored stone with unique patterning."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
     name: "Kandala Grey",
     image: "images/Kandala-Grey.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Versatile grey stone for various applications."
+    description: "Material: Sandstone | Thickness: 20-30mm"
   },
   {
-    name: "Kandala Grey Coat",
+    name: "Kandala Grey Coated",
     image: "images/Kandala-Grey-Coat.jpg",
-    description: "Material: Sandstone | Thickness: 18-25mm | Finish: Brushed | Textured grey surface with enhanced durability."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
-    name: "Kandala Grey Wall",
+    name: "Kandala Grey",
     image: "images/Kandla-Grey-Wall.jpg",
-    description: "Material: Sandstone | Thickness: 15-20mm | Finish: Natural | Light grey stone perfect for wall cladding."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
-    name: "Kandala Grey Wall Cladding",
+    name: "Kandala Grey",
     image: "images/Kandla-Grey-Wall-Cladding.jpg",
-    description: "Material: Sandstone | Thickness: 15-20mm | Finish: Sawn | Uniform grey stone for seamless wall designs."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
     name: "Mint Stone",
     image: "images/Mint-Stone.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Unique mint green tones for distinctive designs."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
-    name: "Mint Stone Coat",
+    name: "Mint Stone Coated",
     image: "images/Mint-Stone-Coat.jpg",
-    description: "Material: Sandstone | Thickness: 18-25mm | Finish: Brushed | Textured mint green surface."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
     name: "Modak",
     image: "images/Modak.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Warm beige stone with subtle patterning."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
     name: "Oriental Gold",
     image: "images/Oriental Gold.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Rich golden tones for luxurious applications."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
     name: "Oriental White",
     image: "images/Oriental White.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Clean white stone with subtle veining."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
     name: "Rajgreen",
     image: "images/Rajgreen.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Earthy green tones for natural designs."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
-    name: "Rajgreen Coat",
+    name: "Rajgreen Coated",
     image: "images/Rajgreen-Coat.jpg",
-    description: "Material: Sandstone | Thickness: 18-25mm | Finish: Brushed | Textured green surface with enhanced durability."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
     name: "Sagar Black",
     image: "images/Sagar-Black.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Deep black stone with consistent coloring."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
-    name: "Sagar Black Sandstone",
+    name: "Sagar Black",
     image: "images/Sagar-Black-Sandstone.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Premium black sandstone for high-end projects."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
     name: "Silver Grey",
     image: "images/Silver-Grey.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Cool grey tones for modern designs."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
     name: "Silver Shine",
     image: "images/Silver-Shine.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Polished | Reflective surface with silver tones."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
     name: "Autumn Brown",
     image: "images/Single-Autumn-Brown.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Warm brown tones resembling autumn leaves."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
 
   {
     name: "Deoli Green",
     image: "images/Single-Deoli-Green.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Earthy green with natural variations."
+    description: "Material: Slatestone | Thickness: 18-25mm"
   },
   {
     name: "Kandala Grey",
     image: "images/Single-Kanadala-Grey.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Medium grey with subtle patterning."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
-    name: "KG Smooth Honed",
+    name: "Kandala Grey Smooth Honed",
     image: "images/Single-KG-Smooth-Honed.jpg",
-    description: "Material: Sandstone | Thickness: 18-25mm | Finish: Honed | Smooth surface with uniform appearance."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
-    name: "KG Smooth Honed 2",
+    name: "Kandala Grey Smooth Honed",
     image: "images/Single-KG-Smooth-Honed-2.jpg",
-    description: "Material: Sandstone | Thickness: 18-25mm | Finish: Honed | Alternative grade with similar characteristics."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
     name: "Kundmulti",
     image: "images/Single-Kundmulti.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Multicolored stone with warm tones."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
     name: "Lalitpur Grey",
     image: "images/Single-Latipur-Grey.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Cool grey with blue undertones."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
-    name: "Latipur Yellow",
+    name: "Lalitpur Yellow",
     image: "images/Single-Latipur-Yellow.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Warm yellow tones for sunny spaces."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
     name: "Mandana",
     image: "images/Single-Mandana.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Earthy tones with distinctive patterns."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
     name: "Mint Ivory",
 
     image: "images/Mint-ivory-Sandstone.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Soft mint green with ivory accents."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
-    name: "Mint Natural",
+    name: "Mint",
     image: "images/Single-Mint-Natural.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Natural mint tones with variations."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
     name: "Modak",
     image: "images/Single-Modak.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Warm beige with subtle veining."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
     name: "Rainbow",
     image: "images/Single-Rainbow.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Multicolored stone with vibrant patterns."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
     name: "Raj Green",
     image: "images/Single-Raj-Green.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Earthy green with natural variations."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
-    name: "Red Natural",
+    name: "Red",
     image: "images/Single-Red-Natural.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Vibrant red with natural patterning."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
     name: "Sagar Black",
     image: "images/Single-Sagar-Black.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Deep black with consistent coloring."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
     name: "Silver Grey",
     image: "images/Single-Silver-Grey.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Cool grey tones for modern applications."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
     name: "Teak",
     image: "images/Single-Teak.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Wood-like appearance in stone form."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
     name: "Teak Wood",
     image: "images/Teak-Wood.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Realistic wood grain patterns in stone."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
-    name: "Teak Wood Coat",
+    name: "Teak Wood Coated",
     image: "images/Teak-Wood-Coat.jpg",
-    description: "Material: Sandstone | Thickness: 18-25mm | Finish: Brushed | Textured wood-like surface."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
     name: "Zeera Green",
     image: "images/Zeera-Green.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Unique green stone with speckled appearance."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
-    name: "Agra Red Natural",
+    name: "Agra Red",
     image: "images/New/Agra-Red-Natural.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Unique green stone with speckled appearance."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
-    name: "Agra Red Pattern",
+    name: "Agra Red",
     image: "images/New/Agra-Red-Pattern.webp",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Unique green stone with speckled appearance."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
-    name: "Agra Red Pattern",
+    name: "Agra Red",
     image: "images/New/Agra-Red-Pattern-Natural.png",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Unique green stone with speckled appearance."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
     name: "Dholpur Beige",
     image: "images/New/Dholpur-Beidge-Natural.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Unique green stone with speckled appearance."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
-    name: "Kandla Grey Natural",
+    name: "Kandala Grey",
     image: "images/New/Kandala-Grey-Natural-Sandstone.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Unique green stone with speckled appearance."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
     name: "Kandala Grey",
     image: "images/New/Kanadala-Grey-New.png",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Unique green stone with speckled appearance."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
-    name: "Lalitpur Natural",
+    name: "Lalitpur",
     image: "images/New/Lalitpur-Natural.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Unique green stone with speckled appearance."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   {
-    name: "Mandana Natural",
+    name: "Mandana",
     image: "images/New/Mandana-Natural-Sandstone.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Unique green stone with speckled appearance."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   ,
   {
     name: "Mint White",
     image: "images/New/Mint-White-Natural.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Unique green stone with speckled appearance."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   ,
   {
     name: "Rainbow",
     image: "images/New/Rainbow-Sandstone.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Unique green stone with speckled appearance."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
 
   {
     name: "Rajgreen",
     image: "images/New/Rajgreen-Natural.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Unique green stone with speckled appearance."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
   ,
 
   {
     name: "Teak Wood",
     image: "images/New/Teak-Wood-Polished.jpg",
-    description: "Material: Sandstone | Thickness: 20-30mm | Finish: Natural | Unique green stone with speckled appearance."
+    description: "Material: Sandstone | Thickness: 25-30mm"
   },
 
 
